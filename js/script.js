@@ -12,7 +12,7 @@ const quotes = [{
         quote:"Only i can change my life. No one can do it for me",
         source:"Carol Burnett"
     }, {
-        quote:"The scret of getting ahead is getting started",
+        quote:"The secret of getting ahead is getting started",
         source:"Mark Twain", tag:"motivational"
     }]
 //The function getRandomQuote returns a random quote from the array quotes
