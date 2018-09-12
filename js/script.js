@@ -28,34 +28,34 @@ const printQuote = function () {
     let blue = Math.floor((Math.random() * 255))
     document.body.style.backgroundColor = `rgb(${red},${green},${blue})`
     let quoteObj = getRandomQuote(quotes);
-    quoteBox = document.getElementById('quote-box');
+    const quoteBox = document.getElementById('quote-box');
     quoteBox.innerHTML=''
     //Create set class and append the p element that contain the quote to the DOM
-    p = document.createElement('p')
+   const p = document.createElement('p')
     p.innerHTML = quoteObj.quote
     p.setAttribute('class','quote')
     quoteBox.append(p)
     //Create set class and append the p element that contain the source to the DOM
-    source = document.createElement('p')
+    const source = document.createElement('p')
     source.innerHTML = quoteObj.source
     source.setAttribute('class','source')
     quoteBox.append(source)
 
     //Create set class and append the citation and year and tag if they are not undefined
     if (quoteObj.citation!=undefined) {
-        citation = document.createElement('span')
+        const citation = document.createElement('span')
         citation.innerHTML = quoteObj.citation
         citation.setAttribute('class', 'citation')
         source.append(citation)
     }
     if (quoteObj.year != undefined) {
-        year = document.createElement('span')
+        const year = document.createElement('span')
         year.innerHTML = quoteObj.year
         year.setAttribute('class', 'year')
         source.append(year)
     }
-    if (quote.tag != undefined) {
-        tag = document.createElement('span')
+    if (quoteObj.tag != undefined) {
+        const tag = document.createElement('span')
         tag.innerHTML = quoteObj.tag
         tag.setAttribute('class', 'tag')
         source.append(tag)
